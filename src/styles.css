@@ -1,58 +1,44 @@
-/* Importar fuente moderna */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+.home-content { padding: 20px; }
+.title { color: #1e293b; text-align: center; margin-bottom: 30px; }
 
-:root {
-  --primary: #2563eb;
-  --bg: #f3f4f6;
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg);
+.btn-add {
+  background-color: #2563eb;
+  color: white;
 }
 
-/* Barra de navegación */
-.navbar {
-  background: var(--primary);
-  padding: 1rem 2rem;
+.metas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.meta-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: #f8fafc;
+  border-left: 5px solid #2563eb;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
+.meta-card:hover { transform: scale(1.02); }
 
-.nav-links {
-  display: flex;
-  gap: 20px; /* Esto separa el Home del About */
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+.btn-delete {
+  background: #fee2e2;
+  color: #ef4444;
   padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.3s;
 }
 
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* Contenido principal */
-.container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  min-height: 200px;
+.empty-msg {
+  text-align: center;
+  color: #64748b;
+  margin-top: 20px;
 }

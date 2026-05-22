@@ -1,1 +1,29 @@
-<p>home works!</p>
+<div class="home-content">
+  <h1 class="title">Mis Metas de Vida</h1>
+
+  <!-- Formulario para agregar -->
+  <div class="input-group">
+    <input
+      type="text"
+      [(ngModel)]="nuevaMeta"
+      placeholder="Ej: Viajar a Japón..."
+      (keyup.enter)="agregar()"
+    >
+    <button class="btn-add" (click)="agregar()">Agregar</button>
+  </div>
+
+  <hr>
+
+  <!-- Lista de metas -->
+  <div class="metas-list">
+    <div class="meta-card" *ngFor="let m of metas">
+      <p>{{ m.meta }}</p>
+      <button class="btn-delete" (click)="eliminar(m.id!)">🗑️</button>
+    </div>
+
+    <!-- Mensaje si no hay metas -->
+    <div *ngIf="metas.length === 0" class="empty-msg">
+      Aún no tienes metas. ¡Empieza agregando una!
+    </div>
+  </div>
+</div>

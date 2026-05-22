@@ -5,7 +5,7 @@ import { Meta } from '../models/meta.model';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   metas: Meta[] = [];
@@ -13,14 +13,17 @@ export class HomeComponent implements OnInit {
 
   constructor(private metaService: MetaService) {}
 
-  ngOnInit() {
-    this.metaService.getMetas().subscribe(res => this.metas = res);
+  ngOnInit(): void {
+    // Suscribirse a los cambios de la base de datos
+    this.metaService.getMetas().subscribe(res => {
+      this.metas = res;
+    });
   }
 
   agregar() {
-    if (this.nuevaMeta) {
+    if (this.nuevaMeta.trim().length > 0) {
       this.metaService.addMeta({ meta: this.nuevaMeta });
-      this.nuevaMeta = '';
+      this.nuevaMeta = ''; // Limpiar el campo
     }
   }
 

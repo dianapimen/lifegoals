@@ -1,44 +1,45 @@
-.home-content { padding: 20px; }
-.title { color: #1e293b; text-align: center; margin-bottom: 30px; }
+/* src/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
 
-.input-group {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8; /* Gris muy clarito */
 }
 
-.btn-add {
-  background-color: #2563eb;
-  color: white;
-}
-
-.metas-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.meta-card {
+/* NAVBAR AZUL FUERTE */
+.navbar {
+  background-color: #1a56db !important; /* Azul Rey */
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  background: #f8fafc;
-  border-left: 5px solid #2563eb;
-  border-radius: 8px;
-  transition: 0.3s;
+  color: white;
+  width: 100%;
 }
 
-.meta-card:hover { transform: scale(1.02); }
+.logo { font-size: 22px; font-weight: bold; }
 
-.btn-delete {
-  background: #fee2e2;
-  color: #ef4444;
-  padding: 8px 12px;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
 }
 
-.empty-msg {
-  text-align: center;
-  color: #64748b;
-  margin-top: 20px;
+.nav-links a:hover { background-color: rgba(255,255,255,0.2); }
+
+/* CONTENEDOR BLANCO TIPO TARJETA */
+.container {
+  max-width: 800px;
+  margin: 40px auto; /* Centra la tarjeta */
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }

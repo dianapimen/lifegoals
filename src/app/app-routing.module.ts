@@ -7,9 +7,9 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  // Agrega esto: { useHash: true }
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

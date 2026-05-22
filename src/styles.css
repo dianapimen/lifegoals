@@ -164,3 +164,19 @@ body {
 .btn-icon:hover {
   background-color: #fecaca;
 }
+
+.about-card {
+  text-align: center;
+  padding: 20px;
+}
+.profile-details {
+  margin-top: 20px;
+  line-height: 2;
+  font-size: 1.1rem;
+  color: #475569;
+}
+.about-card h2 {
+  color: #1a56db;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}

@@ -1,13 +1,22 @@
 <div class="home-wrapper">
   <h2>Mis Metas de Vida</h2>
   <div class="input-container">
-    <input type="text" class="custom-input" [(ngModel)]="nuevaMeta" placeholder="Escribe una nueva meta..." (keyup.enter)="agregar()">
-    <button class="btn-primary" (click)="agregar()">Agregar</button>
+    <input
+      type="text"
+      class="custom-input"
+      [(ngModel)]="nuevaMeta"
+      placeholder="Escribe una nueva meta..."
+      (keyup.enter)="agregar()"
+    >
+
+    <button class="btn-primary" (click)="agregar()">Guardar Meta</button>
   </div>
+
   <div class="goals-list">
     <div class="goal-item" *ngFor="let m of metas">
       <span>{{ m.meta }}</span>
-      <button class="btn-primary" (click)="agregar()">Guardar Meta</button>
+      <!-- Este botón debe ser para BORRAR -->
+      <button class="btn-delete" (click)="eliminar(m.id!)">Borrar</button>
     </div>
   </div>
 </div>

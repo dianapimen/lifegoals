@@ -145,7 +145,6 @@ body {
   color: #334155;
 }
 
-/* BOTÓN ELIMINAR (ICONO) */
 .btn-icon {
   background-color: #fee2e2;
   color: #ef4444;
@@ -163,6 +162,7 @@ body {
 
 .btn-icon:hover {
   background-color: #fecaca;
+  color: white;
 }
 
 .about-card {

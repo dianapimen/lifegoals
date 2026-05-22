@@ -1,23 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importar fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --bg: #f3f4f6;
+}
+
 body {
-  margin: 0; font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5; color: #1c1e21;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
 }
-nav {
-  background: #2563eb; padding: 1rem; display: flex; gap: 20px;
+
+/* Barra de navegación */
+.navbar {
+  background: var(--primary);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
-nav a { color: white; text-decoration: none; font-weight: bold; }
-.container { max-width: 600px; margin: 40px auto; padding: 20px; }
-.card {
-  background: white; padding: 20px; border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px;
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-input {
-  width: 70%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Esto separa el Home del About */
 }
-button {
-  padding: 10px 20px; border: none; border-radius: 8px;
-  cursor: pointer; transition: 0.3s;
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
-.btn-add { background: #2563eb; color: white; }
-.btn-delete { background: #ef4444; color: white; float: right; }
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Contenido principal */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+}

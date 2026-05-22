@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MetaService } from '../services/meta-service.service';
 import { Meta } from '../models/meta.model';
 
